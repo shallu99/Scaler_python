@@ -1,0 +1,4 @@
+[INFO] 2025-08-08 12:01:03 GET /index.html 200 OK
+[WARNING] 2025-08-08 12:01:10 GET /not-found 404 Not Found
+Random text with numbers 12:34
+[ERROR] 2025-08-08 12:01:15 GET /server-error 500 Internal Server Error
