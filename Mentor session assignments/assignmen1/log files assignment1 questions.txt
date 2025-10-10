@@ -1,0 +1,38 @@
+Scripts 
+Q1. Find Top 10 IPs by Frequency
+Log Type: Nginx / Apache access log
+192.168.1.10 - - [24/May/2025:10:21:05 +0000] "GET /index.html HTTP/1.1" 200 1024 
+
+Q2. Filter Requests with 5xx Status Codes
+Task: Extract all lines where the HTTP status code is in the 5xx range. 
+
+Q3. Count Number of Unique IPs Making Requests
+Task: Count how many unique IP addresses accessed the server.
+
+Q4. Identify the Most Frequently Requested URL Path
+Log Line:
+203.0.113.42 - - [24/May/2025:10:22:15 +0000] "GET /api/user/profile HTTP/1.1" 200 350
+Task: Extract the path (like /api/user/profile) and count the most accessed one. 
+
+Q5. Extract Timestamp and Group Requests Per Minute
+Task: Extract timestamps and count number of requests per minute.
+
+Q6. Extract and Count User Agents
+Extended Log:
+203.0.113.42 - - [24/May/2025:10:22:15 +0000] "GET /api/user/profile HTTP/1.1" 200 350 "-" "Mozilla/5.0"
+Task: Count top 5 most common user agents. 
+
+Q7. List All IPs That Triggered 404 Errors
+Task: Extract IPs which caused 404 status code responses. 
+
+Q8. Calculate Average Response Size
+Field: Last field in the log line (e.g., 350 in bytes)
+Task: Calculate the average size of all responses.
+
+Q9. Extract Top 10 Referrers
+Log:
+... "GET /home HTTP/1.1" 200 1024 "https://google.com/search?q=..." "Mozilla/5.0"
+Task: Extract the referrer field and show the top 10 sources. 
+
+Q10. Detect Possible Brute Force IPs
+Task: Find IPs that accessed the /login endpoint more than 100 times in a day.
