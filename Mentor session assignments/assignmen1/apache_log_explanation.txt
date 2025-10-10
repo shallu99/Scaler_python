@@ -1,0 +1,21 @@
+Sample Apache Log Line:
+192.168.1.10 - - [10/Oct/2025:14:35:22 +0000] "GET /index.html HTTP/1.1" 200 1024 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+Explanation of Each Part:
+-----------------------------------------------------------------------------------
+192.168.1.10    -> Client IP address (the IP of the machine making the request)
+-               -> Remote logname (usually unused, so shown as '-')
+-               -> Authenticated user (if no login, then '-')
+[10/Oct/2025:14:35:22 +0000] -> Timestamp (day/month/year:hour:minute:second timezone)
+"GET /index.html HTTP/1.1"   -> HTTP request line
+GET           -> Method (type of request, e.g., GET, POST, etc.)
+/index.html   -> Resource path (the page or file being requested)
+HTTP/1.1      -> Protocol version
+200             -> Status code (200 means OK, successful response)
+1024            -> Response size in bytes (size of returned object)
+"-"             -> Referrer (page that linked to this resource, '-' means none)
+"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                -> User-Agent (browser or tool used to make the request)
+
+General Log Format:
+IP - user [timestamp] "METHOD URL PROTOCOL" status size "referrer" "user-agent"
