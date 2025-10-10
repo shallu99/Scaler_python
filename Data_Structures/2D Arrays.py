@@ -290,21 +290,3 @@ Explanation 2:
 ==> ( [[1]] ) * 5
 ==> [[5*1]]
 ==> [[5]]'''
-
-
-class Solution:
-    # @param A : list of list of integers
-    # @param B : integer
-    # @return a list of list of integers
-    def solve(self, A, B):
-        rows = len(A)
-        cols = len(A[0])
-
-        result = [[0] * cols for _ in range(rows)]
-
-        for i in range(rows):
-            for j in range(cols):
-                result[i][j] = A[i][j] * B
-
-        return result
-
